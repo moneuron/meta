@@ -2,9 +2,8 @@
 A meta-analysis pipeline
 
 ## Overview
-![bears]()
 <p align="center">
-  <img src="./Pipeline.jpg" alt="pipeline" width="738">
+  <img src="./Pipeline.jpg" alt="pipeline" width="600">
 </p>
 ### Prerequisites
 

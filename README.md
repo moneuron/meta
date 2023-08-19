@@ -1,9 +1,7 @@
 # meta
 A meta-analysis pipeline
-
-## Overview
 <p align="center">
-  <img src="./Pipeline.jpg" alt="pipeline" width="600">
+  <img src="./pipe.png" alt="pipeline" width="600">
 </p>
 ### Prerequisites
 

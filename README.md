@@ -2,8 +2,10 @@
 A meta-analysis pipeline
 
 ## Overview
-![bears](https://github.com/abikahs/meta/blob/main/Pipeline.jpg?raw=true)
-
+![bears]()
+<p align="center">
+  <img src="./Pipeline.jpg" alt="pipeline" width="738">
+</p>
 ### Prerequisites
 
 The things you need before installing the software.

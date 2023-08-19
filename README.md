@@ -2,13 +2,7 @@
 A meta-analysis pipeline
 
 ## Overview
-<h1 align="center">
-  <br>
-  <a><img src="https://imgur.com/KjXVDZm" alt="Pipeline" width="200"></a>
-  <br>
-  Markdownify
-  <br>
-</h1>
+![bears](https://ibb.co/tp3Y3j7)
 
 ### Prerequisites
 

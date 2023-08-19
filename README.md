@@ -2,7 +2,7 @@
 A meta-analysis pipeline
 
 ## Overview
-![bears](https://ibb.co/tp3Y3j7)
+![bears](https://github.com/abikahs/meta/blob/main/Pipeline.jpg?raw=true)
 
 ### Prerequisites
 

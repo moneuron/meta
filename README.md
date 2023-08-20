@@ -6,7 +6,7 @@ A meta-analysis pipeline
 
 ### Prerequisites
 
-```
+```bash
 $ pip install pandas
 $ pip install requests
 ```

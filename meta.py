@@ -3,7 +3,7 @@ import os, sys
 
 while True:
     if len(sys.argv) != 3:
-        print("Usage: python3 meta.py <PATH> <CSV Name>")
+        print("Usage: python meta.py <PATH> <CSV Name>")
         sys.exit(1)
     else:
         break

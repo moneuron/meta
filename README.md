@@ -8,7 +8,7 @@ A meta-analysis pipeline
 
 The things you need before installing the software.
 
-* python
+
 * pip install pandas
 * pip install requests
 
@@ -16,8 +16,10 @@ The things you need before installing the software.
 ## Usage
 
 ```
+$ pip install pandas
+$ pip install requests
+
 $ python meta.py <PATH> <CSV Name>
-$ 
 $ python zotero.py <PATH> <.txt Name>
 ```
 

@@ -6,19 +6,15 @@ A meta-analysis pipeline
 
 ### Prerequisites
 
-The things you need before installing the software.
-
-
-* pip install pandas
-* pip install requests
+```
+$ pip install pandas
+$ pip install requests
+```
 
 
 ## Usage
 
 ```
-$ pip install pandas
-$ pip install requests
-
 $ python meta.py <PATH> <CSV Name>
 $ python zotero.py <PATH> <.txt Name>
 ```

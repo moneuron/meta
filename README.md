@@ -9,8 +9,8 @@ A meta-analysis pipeline
 The things you need before installing the software.
 
 * python
-* pandas library
-* request library
+* pip install pandas
+* pip install requests
 
 
 ## Usage

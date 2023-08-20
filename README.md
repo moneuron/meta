@@ -15,7 +15,7 @@ $ pip install requests
 ## Usage
 
 ```
-$ python meta.py <PATH> <CSV Name>
+$ python meta.py <PATH> <.csv Name>
 $ python zotero.py <PATH> <.txt Name>
 ```
 

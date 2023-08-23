@@ -36,7 +36,7 @@ def main():
     
     process_doi_file(input_file, output_file)
     
-    print("Done! ∂")
+    print("D∂ne!")
 
 if __name__ == "__main__":
     main()

@@ -44,4 +44,4 @@ for index, row in ndf.iterrows():
             file.write(f"-> {row['PublicationYear']} | {csv}\n\nTitle: {row['Title']}\n\nAuthor(s): {row['FirstAuthor']}\n\n˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙\n{row['DOI']}")
     id += 1
 
-print("Done! ∂")
+print("D∂ne!")

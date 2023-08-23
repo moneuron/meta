@@ -21,10 +21,8 @@ except:
 
 folder_path = f"{path}/{folder}"
 
-# Check if the folder already exists before creating it
 if not os.path.exists(folder_path):
     try:
-        # Create the new folder
         os.mkdir(folder_path)
     except OSError as e:
         sys.exit(f"Error: {e}")

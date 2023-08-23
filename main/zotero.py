@@ -6,11 +6,11 @@ def fetch_and_write(doi, output_file):
         if response.status_code == 200:
             with open(output_file, "a", encoding="utf-8") as file:
                 file.write(response.text + "\n")
-                print(f"DOI {doi} fetched and written to {output_file}")
+                print(f"{doi} f∂und :)")
         else:
-            print(f"Failed to fetch DOI {doi}. Status code: {response.status_code}")
+            print(f"{doi} not dound :(")
     except Exception as e:
-        print(f"Error fetching DOI {doi}: {e}")
+        print(f"Error {doi}: {e}")
 
 def process_doi_file(input_file, output_file):
     with open(input_file, "r", encoding="utf-8") as file:
@@ -40,5 +40,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-

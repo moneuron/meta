@@ -17,7 +17,7 @@ def process_doi_file(input_file, output_file):
         dois = file.readlines()
         
     for doi in dois:
-        doi = doi.strip()  # Remove leading/trailing whitespace
+        doi = doi.strip()
         fetch_and_write(doi, output_file)
 
 def main():

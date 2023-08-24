@@ -1,5 +1,8 @@
 import pandas as pd
 import os, sys
+from tabulate import tabulate
+
+list =[]
 
 while True:
     if len(sys.argv) != 3:
@@ -38,8 +41,10 @@ for index, row in ndf.iterrows():
     with open(file_path, "w") as file:
         try:
             file.write(f"-> {int(row['PublicationYear'])} | {csv}\n\nTitle: {row['Title']}\n\nAuthor(s): {row['FirstAuthor']}\n\n˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙\n{row['DOI']}")
+            list.append(["->",row['DOI']])
         except:
             file.write(f"-> {row['PublicationYear']} | {csv}\n\nTitle: {row['Title']}\n\nAuthor(s): {row['FirstAuthor']}\n\n˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙\n{row['DOI']}")
+            list.append(["->",row['DOI']])
     id += 1
-
-print("D∂ne!")
+print(tabulate(list, headers=["Found", "DOI"], tablefmt="github"))
+print(f"\ncheck ->",f"{path}/{folder}")

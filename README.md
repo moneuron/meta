@@ -9,6 +9,7 @@ A meta-analysis pipeline
 ```bash
 $ pip install pandas
 $ pip install requests
+$ pip install tabulate
 ```
 
 

@@ -3,30 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viewer</title>
+  <title>viewer3</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <h1>Viewer</h1>
-  <div id="controls">
+  <div id="fileInputContainer">
     <div>
-      <label for="fileInput">Select files:</label>
+      <label for="fileInput"></label>
       <input type="file" id="fileInput" multiple accept=".txt">
     </div>
-    <div>
-      <label for="sortOption">Sort by:</label>
-      <select id="sortOption">
-        <option value="name">Name</option>
-        <option value="number">Number</option>
-      </select>
-    </div>
   </div>
-  
+  <button class="save-button" id="downloadButton" style="display: none;">⌗</button>
+  <p>
   <div id="fileList"></div>
-  <hr>
-  <button id="downloadButton">SAVE</button>
-  
   <script src="script.js"></script>
 </body>
 </html>

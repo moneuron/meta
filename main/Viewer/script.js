@@ -117,6 +117,8 @@ function handleButtonClicks(event) {
     
   }
   if (event.target && event.target.classList.contains('no-button')) {
+    const textarea = event.target.parentElement.querySelector('textarea');
+    textarea.value = "";
     event.target.parentElement.style.display = 'none';
   }
 }

@@ -1,12 +1,23 @@
-const fileInput = document.getElementById('fileInput');
-const sortOption = document.getElementById('sortOption');
-const fileList = document.getElementById('fileList');
-const downloadButton = document.getElementById('downloadButton');
+const elements = {
+  fileInput: document.getElementById('fileInput'),
+  sortOption: document.getElementById('sortOption'),
+  fileList: document.getElementById('fileList'),
+  downloadButton: document.getElementById('downloadButton'),
+};
+
 let textEntries = {};
 
-fileInput.addEventListener('change', handleFileInputChange);
-downloadButton.addEventListener('click', handleDownloadClick);
-fileList.addEventListener('click', handleButtonClicks);
+
+elements.fileInput.addEventListener('change', handleFileInputChange);
+elements.fileInput.addEventListener('change', updateDownloadButton);
+
+
+elements.downloadButton.addEventListener('click', handleDownloadClick);
+elements.fileList.addEventListener('click', handleButtonClicks);
+
+function updateDownloadButton() {
+  elements.downloadButton.style.display = elements.fileInput.files && elements.fileInput.files.length > 0 ? 'block' : 'none';
+}
 
 
 document.getElementById('fileInput').addEventListener('change', function() {
@@ -29,20 +40,19 @@ document.getElementById('fileInput').addEventListener('change', function() {
   }
 });
 
-
 function updateSort() {
-  const files = Array.from(fileList.querySelectorAll('.file-item'));
+  const files = Array.from(elements.fileList.querySelectorAll('.file-item'));
   files.sort((a, b) => {
     const numA = parseInt(a.textContent);
     const numB = parseInt(b.textContent);
     return numA - numB;
   });
-  fileList.innerHTML = '';
-  files.forEach(file => fileList.appendChild(file));
+  elements.fileList.innerHTML = '';
+  files.forEach(file => elements.fileList.appendChild(file));
 }
 
 function handleFileInputChange(event) {
-  fileList.innerHTML = '';
+  elements.fileList.innerHTML = '';
   textEntries = {};
   const files = event.target.files;
   for (const file of files) {
@@ -76,7 +86,7 @@ function createFileDiv(fileName, fileContent, fileId, doi) {
     <p>
     <pre>${highlightLinks(fileContent)}</pre>
     <div class="textarea-container">
-      <textarea data-file-id="${fileId}" rows="1" cols="30" placeholder=" "></textarea>
+      <textarea id="file_${fileName}_${doi}" data-file-id="${fileId}" rows="1" cols="30" name="fileTextArea_${fileId}" placeholder=" "></textarea>
     </div>
   `;
   return fileDiv;
@@ -142,7 +152,6 @@ function handleDownloadClick() {
   downloadLink.download = 'saved.txt';
   downloadLink.click();
 }
-
 
 window.addEventListener('beforeunload', function (event) {
   event.preventDefault();

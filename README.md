@@ -32,5 +32,3 @@ If you have any questions, feedback, or need assistance, feel free to reach out:
 
 ---
 
-*This project is brought to you by [data-meta.info](data-meta.info)*
-

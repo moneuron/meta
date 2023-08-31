@@ -27,7 +27,7 @@
 
 If you have any questions, feedback, or need assistance, feel free to reach out:
 
-- **Email:** [-@data-meta.info](mailto:contact@data-meta.info)
+- **Email:** [support@data-meta.info](mailto:support@data-meta.info)
 - **GitHub:** [github.com/abikahs/meta](https://github.com/abikahs/meta)
 
 ---

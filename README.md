@@ -1,7 +1,7 @@
 # meta
 A meta-analysis pipeline
 <p>
-  <img src="./pipe.png" alt="pipeline" width="600">
+  <img src="./pipe.png" alt="pipeline" width="400">
 </p>
 
 ## Description
@@ -10,11 +10,11 @@ A meta-analysis pipeline
 
 ## Table of Contents
 
-- [Installation](#installation)
+- [Getting Started](#Getting Started)
 - [Usage](#usage)
 - [Contact Information](#contact-information)
 
-## Installation
+## Getting Started
 
 1. Clone the repository:
    ```bash
@@ -38,7 +38,7 @@ To use the **meta** tool, follow the installation steps mentioned above. Once yo
 
 If you have any questions, feedback, or need assistance, feel free to reach out:
 
-- **Email:** [contact@data-meta.info](mailto:contact@data-meta.info)
+- **Email:** [-@data-meta.info](mailto:contact@data-meta.info)
 - **GitHub:** [github.com/abikahs/meta](https://github.com/abikahs/meta)
 
 ---

@@ -1,9 +1,3 @@
-# meta
-A meta-analysis pipeline
-<p>
-  <img src="./pipe.png" alt="pipeline" width="400">
-</p>
-
 ## Description
 
 **meta** is a comprehensive meta-analysis pipeline designed to facilitate insightful research by integrating data across diverse fields. This tool empowers researchers to uncover hidden insights and trends that individual studies might overlook.
@@ -31,8 +25,9 @@ A meta-analysis pipeline
 4. Follow the pipeline's flowchart to proceed with the analysis.
 
 ## Usage
-
-To use the **meta** tool, follow the installation steps mentioned above. Once you have set up the dependencies, you can integrate and analyze data from various sources to perform comprehensive meta-analysis.
+<p>
+  <img src="./pipe.png" alt="pipeline" width="800">
+</p>
 
 ## Contact Information
 
@@ -43,5 +38,5 @@ If you have any questions, feedback, or need assistance, feel free to reach out:
 
 ---
 
-*This project is brought to you by data-meta.info*
+*This project is brought to you by [data-meta.info](data-meta.info)*
 

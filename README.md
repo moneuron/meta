@@ -2,12 +2,6 @@
 
 **meta** is a comprehensive meta-analysis pipeline designed to facilitate insightful research by integrating data across diverse fields. This tool empowers researchers to uncover hidden insights and trends that individual studies might overlook.
 
-## Table of Contents
-
-- [Getting Started](#Getting Started)
-- [Usage](#usage)
-- [Contact Information](#contact-information)
-
 ## Getting Started
 
 1. Clone the repository:

@@ -43,7 +43,7 @@ body {
   color: #6c757d;
 }
 .contact-info a {
-  color: #007bff;
+  color: #6c757d;
 }
 
 .center {
@@ -58,5 +58,10 @@ h3 {
 }
 p {
   color: #666;
+  line-height: 1.6;
+}
+
+code {
+  color: #007bff;
   line-height: 1.6;
 }

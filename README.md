@@ -18,7 +18,7 @@
    ```
 4. Follow the pipeline's flowchart to proceed with the analysis.
 
-## Usage
+## Flowchart
 <p>
   <img src="./flowchart.png" alt="flowchart" width="600">
 </p>

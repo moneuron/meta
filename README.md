@@ -20,7 +20,7 @@
 
 ## Usage
 <p>
-  <img src="./pipe.png" alt="pipeline" width="700">
+  <img src="./flowchart.png" alt="flowchart" width="600">
 </p>
 
 ## Contact Information

@@ -6,9 +6,9 @@ def fetch_and_write(doi, output_file):
         if response.status_code == 200:
             with open(output_file, "a", encoding="utf-8") as file:
                 file.write(response.text + "\n")
-                print(f"{doi} f∂und :)")
+                print(f"{doi} :)")
         else:
-            print(f"{doi} not dound :(")
+            print(f"{doi} not found :(")
     except Exception as e:
         print(f"Error {doi}: {e}")
 
@@ -36,7 +36,7 @@ def main():
     
     process_doi_file(input_file, output_file)
     
-    print("D∂ne!")
+    print("Done!")
 
 if __name__ == "__main__":
     main()

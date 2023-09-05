@@ -1,50 +1,42 @@
 import pandas as pd
-import os, sys
+import os
+import sys
 from tabulate import tabulate
 
-list =[]
+if len(sys.argv) != 3:
+    print("Usage: python {} <PATH> <file.csv>".format(sys.argv[0]))
+    sys.exit(1)
 
-while True:
-    if len(sys.argv) != 3:
-        print("Usage: python meta.py <PATH> <.csv Name>")
-        sys.exit(1)
-    else:
-        break
+path, csv = sys.argv[1], sys.argv[2]
 
-path = sys.argv[1]
-csv = sys.argv[2]
-folder = sys.argv[2]
+csvfile = os.path.join(path, csv)
+
 try:
-    df = pd.read_csv(f"{path}/{csv}.csv")
-    ndf = df[['Title', 'FirstAuthor', 'DOI','PublicationYear']]
+    df = pd.read_csv(csvfile)
+    ndf = df[['Title', 'FirstAuthor', 'DOI', 'PublicationYear']]
+except FileNotFoundError:
+    sys.exit("CSV not found!")
 
-except:
-    sys.exit("CSV EROR!!")
+folder = csv.replace(".csv", "")
+folder_path = os.path.join(path, folder)
 
+if os.path.exists(folder_path):
+    sys.exit("Folder already exists!")
 
-folder_path = f"{path}/{folder}"
+try:
+    os.mkdir(folder_path)
+except OSError as e:
+    sys.exit(f"Error: {e}")
 
-if not os.path.exists(folder_path):
-    try:
-        os.mkdir(folder_path)
-    except OSError as e:
-        sys.exit(f"Error: {e}")
-else:
-    sys.exit("Folder exists!")
-
-id = 1
-for index, row in ndf.iterrows():
+file_list = []
+for id, (index, row) in enumerate(ndf.iterrows(), start=1):
     if pd.isnull(row['DOI']):
         continue
 
-    file_path = f"{path}/{folder}/{id}.txt"
+    file_path = os.path.join(folder_path, f"{id}.txt")
     with open(file_path, "w") as file:
-        try:
-            file.write(f"-> {int(row['PublicationYear'])} | {csv}\n\nTitle: {row['Title']}\n\nAuthor(s): {row['FirstAuthor']}\n\n˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙\n{row['DOI']}")
-            list.append(["->",row['DOI']])
-        except:
-            file.write(f"-> {row['PublicationYear']} | {csv}\n\nTitle: {row['Title']}\n\nAuthor(s): {row['FirstAuthor']}\n\n˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙˙\n{row['DOI']}")
-            list.append(["->",row['DOI']])
-    id += 1
-print(tabulate(list, headers=["Found", "DOI"], tablefmt="github"))
-print(f"\ncheck ->",f"{path}/{folder}")
+        file.write(f"-> {str(row['PublicationYear'])[:4]} | {csv}\n\nTitle: {row['Title']}\n\nAuthors: {row['FirstAuthor']}\n\n–––––––––––––––––––––––––––––––––\n{row['DOI']}")
+        file_list.append(["->", row['DOI']])
+
+print(tabulate(file_list, headers=["Found", "DOI"], tablefmt="github"))
+print(f"\ncheck -> {folder_path}")

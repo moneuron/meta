@@ -79,16 +79,16 @@ function readTextFile(file) {
 function createFileDiv(fileName, fileContent, fileId, doi) {
   const fileDiv = document.createElement('div');
   fileDiv.classList.add('file-item');
-  fileDiv.innerHTML = `
-    <na>${fileName.split('.').slice(0, -1).join('.')}</na>
-    ${createCheckButton(fileId, doi).outerHTML}
-    ${createNoButton().outerHTML}
-    <p>
-    <pre>${highlightLinks(fileContent)}</pre>
-    <div class="textarea-container">
-      <textarea id="file_${fileName}_${doi}" data-file-id="${fileId}" rows="1" cols="30" name="fileTextArea_${fileId}" placeholder=" "></textarea>
-    </div>
-  `;
+  fileDiv.innerHTML = DOMPurify.sanitize(`
+  <na>${fileName.split('.').slice(0, -1).join('.')}</na>
+  ${createCheckButton(fileId, doi).outerHTML}
+  ${createNoButton().outerHTML}
+  <p>
+  <pre>${highlightLinks(fileContent)}</pre>
+  <div class="textarea-container">
+    <textarea id="file_${fileName}_${doi}" data-file-id="${fileId}" rows="1" cols="30" name="fileTextArea_${fileId}" placeholder=" "></textarea>
+  </div>
+`);
   return fileDiv;
 }
 

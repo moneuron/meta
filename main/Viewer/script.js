@@ -88,6 +88,7 @@ function createFileDiv(fileName, fileContent, fileId, doi) {
       <div class="textarea-container">
         <textarea id="file_${fileName}_${doi}" data-file-id="${fileId}" rows="1" cols="30" name="fileTextArea_${fileId}" placeholder=" "></textarea>
       </div>
+      ${createReadButton(doi).outerHTML}
     `, {
       ADD_ATTR: ['target'],
     });
@@ -102,12 +103,12 @@ function getDOIFromText(text) {
 
 function highlightLinks(text) {
   const doiRegex = /\b(10\.\d{4,}(?:\.\d+)*\/\S+)\b/g;
-  return text.replace(doiRegex, '<a href="https://doi.org/$1" target="_blank">READ</a>');
+  return text.replace(doiRegex, '<br>');
 }
 
 function createCheckButton(fileId, doi) {
   const checkButton = document.createElement('button');
-  checkButton.textContent = 'YES';
+  checkButton.textContent = '✔';
   checkButton.classList.add('check-button');
   checkButton.setAttribute('data-doi', doi);
   return checkButton;
@@ -116,22 +117,48 @@ function createCheckButton(fileId, doi) {
 
 function createNoButton() {
   const NoButton = document.createElement('button');
-  NoButton.textContent = 'NO';
+  NoButton.textContent =  '✖';
   NoButton.classList.add('no-button');
   return NoButton;
 }
 
+function createReadButton(doi) {
+  const readButton = document.createElement('button');
+  readButton.textContent = 'READ';
+  readButton.classList.add('read-button');
+  readButton.setAttribute('data-doi', doi);
+  return readButton;
+}
+
 function handleButtonClicks(event) {
-  if (event.target && event.target.classList.contains('check-button')) {
-    const doi = event.target.getAttribute('data-doi');
-    const textarea = event.target.parentElement.querySelector('textarea');
-    textarea.value = doi;
-    
+  if (!event.target) {
+    return;
   }
-  if (event.target && event.target.classList.contains('no-button')) {
+
+  if (event.target.classList.contains('check-button')) {
+    const doi = event.target.getAttribute('data-doi');
+    if (doi) {
+      const textarea = event.target.parentElement.querySelector('textarea');
+      if (textarea) {
+        textarea.value = doi;
+      }
+    }
+  }
+
+  if (event.target.classList.contains('no-button')) {
     const textarea = event.target.parentElement.querySelector('textarea');
-    textarea.value = "";
-    event.target.parentElement.style.display = 'none';
+    if (textarea) {
+      textarea.value = "";
+    }
+  }
+
+  if (event.target.classList.contains('read-button')) {
+    const doi = event.target.getAttribute('data-doi');
+    if (doi) {
+      const url = `https://doi.org/${doi}`;
+      window.open(url, '_blank');
+      event.target.classList.add('clicked');
+    }
   }
 }
 

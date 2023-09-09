@@ -81,12 +81,11 @@ function createFileDiv(fileName, fileContent, fileId, doi) {
     fileDiv.classList.add('file-item');
     fileDiv.innerHTML = DOMPurify.sanitize(`
       <na>${fileName.split('.').slice(0, -1).join('.')}</na>
-      ${createCheckButton(fileId, doi).outerHTML}
-      ${createNoButton().outerHTML}
       <p>
       <pre>${highlightLinks(fileContent)}</pre>
       <div class="textarea-container">
         <textarea id="file_${fileName}_${doi}" data-file-id="${fileId}" rows="1" cols="30" name="fileTextArea_${fileId}" placeholder=" "></textarea>
+        ${createCheckButton(fileId, doi).outerHTML}
       </div>
       ${createReadButton(doi).outerHTML}
     `, {
@@ -108,7 +107,7 @@ function highlightLinks(text) {
 
 function createCheckButton(fileId, doi) {
   const checkButton = document.createElement('button');
-  checkButton.textContent = '✔';
+  checkButton.textContent = '✦';
   checkButton.classList.add('check-button');
   checkButton.setAttribute('data-doi', doi);
   return checkButton;
@@ -122,9 +121,9 @@ function createNoButton() {
   return NoButton;
 }
 
-function createReadButton(doi) {
+function createReadButton(fileName,doi) {
   const readButton = document.createElement('button');
-  readButton.textContent = 'READ';
+  readButton.textContent = 'VIEW';
   readButton.classList.add('read-button');
   readButton.setAttribute('data-doi', doi);
   return readButton;
@@ -140,6 +139,8 @@ function handleButtonClicks(event) {
     if (doi) {
       const textarea = event.target.parentElement.querySelector('textarea');
       if (textarea) {
+        event.target.classList.add('clicked');
+        textarea.classList.add('clicked');
         textarea.value = doi;
       }
     }

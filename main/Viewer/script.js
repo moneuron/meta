@@ -133,15 +133,21 @@ function handleButtonClicks(event) {
   if (!event.target) {
     return;
   }
-
+  
   if (event.target.classList.contains('check-button')) {
     const doi = event.target.getAttribute('data-doi');
     if (doi) {
       const textarea = event.target.parentElement.querySelector('textarea');
       if (textarea) {
-        event.target.classList.add('clicked');
-        textarea.classList.add('clicked');
-        textarea.value = doi;
+        if (event.target.classList.contains('clicked')) {
+          event.target.classList.remove('clicked');
+          textarea.classList.remove('clicked');
+          textarea.value = '';
+        } else {
+          event.target.classList.add('clicked');
+          textarea.classList.add('clicked');
+          textarea.value = doi;
+        }
       }
     }
   }

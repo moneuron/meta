@@ -12,13 +12,13 @@ def fetch_and_write(doi, output_file):
         if response.status_code == 200:
             with open(output_file, "a", encoding="utf-8") as file:
                 file.write(response.text + "\n")
-                print(f"{doi} :)")
+                print(f"➜ {doi} found :)")
         else:
-            print(f"{doi} not found :(")
+            print(f"➜ {doi} not found :(")
     except requests.exceptions.RequestException as e:
-        print(f"HTTP Error {doi}: {e}")
+        print(f"➜ {doi} not found :(")
     except Exception as e:
-        print(f"Error {doi}: {e}")
+        print(f"➜ {doi} not found :(")
 
 def process_doi_file(input_file, output_file):
     """

@@ -121,7 +121,7 @@ function createNoButton() {
   return NoButton;
 }
 
-function createReadButton(fileName,doi) {
+function createReadButton(doi) {
   const readButton = document.createElement('button');
   readButton.textContent = 'VIEW';
   readButton.classList.add('read-button');

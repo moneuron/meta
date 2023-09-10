@@ -8,17 +8,17 @@ def fetch_and_write(doi, output_file):
     """
     try:
         response = requests.get(f"https://doi.org/{doi}", headers={"Accept": "text/bibliography; style=bibtex"})
-        response.raise_for_status()  # Raise an exception for HTTP errors
+        response.raise_for_status()
         if response.status_code == 200:
             with open(output_file, "a", encoding="utf-8") as file:
                 file.write(response.text + "\n")
-                print(f"➜ {doi} found :)")
+                print(f":) {doi} found")
         else:
-            print(f"➜ {doi} not found :(")
+            print(f"➜ {doi} not found")
     except requests.exceptions.RequestException as e:
-        print(f"➜ {doi} not found :(")
+        print(f"➜ {doi} not found")
     except Exception as e:
-        print(f"➜ {doi} not found :(")
+        print(f"➜ {doi} not found")
 
 def process_doi_file(input_file, output_file):
     """
@@ -45,7 +45,7 @@ def main():
     
     process_doi_file(input_file, output_file)
     
-    print("Done!")
+    print(f"check ➜ {path}")
 
 if __name__ == "__main__":
     main()

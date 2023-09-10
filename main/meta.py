@@ -29,13 +29,16 @@ except OSError as e:
     sys.exit(f"Error: {e}")
 
 file_list = []
+excluded = 0
 for id, (index, row) in enumerate(ndf.iterrows(), start=1):
     if pd.isnull(row['DOI']):
+        excluded += 1
         continue
-
+    
     file_path = os.path.join(folder_path, f"{id}.txt")
     with open(file_path, "w") as file:
         file.write(f"➜ {str(row['PublicationYear'])[:4]} | {csv[:-4]}\n\nTitle: {row['Title']}\n\nAuthors: {row['FirstAuthor']}\n\n{row['DOI']}")
         file_list.append(["➜", row['DOI']])
 print(tabulate(file_list, headers=["Found", "DOI"], tablefmt="github"))
-print(f"\ncheck -> {folder_path}")
+print(f"\nunavailable ➜ {excluded}")
+print(f"check ➜ {folder_path}")

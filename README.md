@@ -1,5 +1,3 @@
-<a href="https://zenodo.org/badge/latestdoi/680643533"><img src="https://zenodo.org/badge/680643533.svg" alt="DOI"></a>
-
 ## Description
 
 **meta** is a comprehensive meta-analysis tool designed to facilitate insightful research by integrating data across diverse fields. This tool empowers researchers to uncover hidden insights and trends that individual studies might overlook.

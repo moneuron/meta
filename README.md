@@ -1,6 +1,6 @@
 ## Description
 
-**meta** is a comprehensive meta-analysis pipeline designed to facilitate insightful research by integrating data across diverse fields. This tool empowers researchers to uncover hidden insights and trends that individual studies might overlook.
+**meta** is a comprehensive meta-analysis tool designed to facilitate insightful research by integrating data across diverse fields. This tool empowers researchers to uncover hidden insights and trends that individual studies might overlook.
 
 ## Getting Started
 
@@ -16,7 +16,7 @@
    ```bash
    pip install -r requirements.txt
    ```
-4. Follow the pipeline's flowchart to proceed with the analysis.
+4. Follow the flowchart to proceed with the analysis.
 
 ## Flowchart
 <p>

@@ -20,7 +20,7 @@
 
 ## Flowchart
 <p>
-  <img src="./flowchart.png" alt="flowchart" width="600">
+  <img src="./flowchart.png" alt="flowchart" width="800">
 </p>
 
 ## Contact Information

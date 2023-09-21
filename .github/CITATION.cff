@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Shakiba
+    given-names: Mohammadhosein
+    orcid: https://orcid.org/0009-0003-4404-7759
+title: "meta: A meta-analysis tool"
+version: 7.0
+url: meta.int-n.info
+date-released: 2023-09-10

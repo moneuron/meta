@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}meta viewer{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'view/styles.css' %}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.9/purify.min.js"></script>
+        {% block script %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+
+            <br>
+            {% if user.is_authenticated %}
+            <h3>{{ request.user.email }}</h3>
+
+            <a class="btn btn-sm btn-outline-primary"  href="{% url 'index' %}" id="inbox">View</a>
+            <a class="btn btn-sm btn-outline-primary"  href="{% url 'settings' %}" id="sent">Settings</a>
+            <a class="btn btn-sm btn-outline-primary" href="{% url 'logout' %}">Log Out</a>
+            {% endif %}
+            <p style="text-align: right;">Powered by <a href="https://int-n.info/"><b>∫n</b></a></p>
+            <hr>
+
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

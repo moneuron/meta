@@ -27,7 +27,7 @@
 
 If you have any questions, feedback, or need assistance, feel free to reach out:
 
-- **Email:** [help@int-n.info](mailto:help@int-n.info)
+- **Email:** [meta@int-n.info](mailto:meta@int-n.info)
 - **GitHub:** [github.com/abikahs](https://github.com/abikahs)
 
 ---

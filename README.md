@@ -6,7 +6,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/abikahs/meta.git
+   git clone https://github.com/mo-shakiba/meta.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -28,7 +28,7 @@
 If you have any questions, feedback, or need assistance, feel free to reach out:
 
 - **Email:** [meta@int-n.info](mailto:meta@int-n.info)
-- **GitHub:** [github.com/abikahs](https://github.com/abikahs)
+- **GitHub:** [github.com/mo-shakiba](https://github.com/mo-shakiba)
 
 ---
 

@@ -23,12 +23,5 @@
   <img src="./docs/flowchart.png" alt="flowchart" width="800">
 </p>
 
-## Contact Information
-
-If you have any questions, feedback, or need assistance, feel free to reach out:
-
-- **Email:** [meta@int-n.info](mailto:meta@int-n.info)
-- **GitHub:** [github.com/mo-shakiba](https://github.com/mo-shakiba)
-
 ---
 

@@ -20,7 +20,7 @@
 
 ## Flowchart
 <p>
-  <img src="./docs/flowchart.png" alt="flowchart" width="800">
+  <img src="https://meta.int-n.info/map.jpg" alt="flowchart" width="800">
 </p>
 
 ---

@@ -6,7 +6,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/mo-shakiba/meta.git
+   git clone https://github.com/moneuron/meta.git
    ```
 2. Navigate to the project directory:
    ```bash

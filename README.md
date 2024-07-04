@@ -1,4 +1,5 @@
-## Description
+# [meta: A meta-analysis tool](https://meta.int-n.info)
+##### by [Mo Shakiba](https://moshakiba.me)
 
 **meta** is a comprehensive meta-analysis tool designed to facilitate insightful research by integrating data across diverse fields. This tool empowers researchers to uncover hidden insights and trends that individual studies might overlook.
 

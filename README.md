@@ -20,6 +20,6 @@
 4. Proceed with the analysis.
 ---
 <p>
-  <img src="https://meta.int-n.info/map.jpg" alt="flowchart" width="800">
+  <img src="https://meta.int-n.info/map.jpg" alt="MAP" width="800">
 </p>
 

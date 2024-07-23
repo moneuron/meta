@@ -1,8 +1,6 @@
 # [meta: A meta-analysis tool](https://meta.int-n.info)
 ##### by [Mo Shakiba](https://github.com/moneuron)
 
-**meta** is a comprehensive meta-analysis tool designed to facilitate insightful research.
-
 ## Getting Started
 
 1. Clone the repository:
@@ -23,3 +21,6 @@
   <img src="https://meta.int-n.info/map.jpg" alt="MAP" width="800">
 </p>
 
+
+If you use this software in your work, please cite it like the following:
+> Shakiba, M. meta: A Meta-analysis Tool (2023).

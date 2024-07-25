@@ -18,5 +18,5 @@
 4. Proceed with the analysis.
 ---
 
-If you use this software in your work, please cite it like the following:
+If you use this in your work, please cite it like the following:
 > Shakiba, M. meta: A Meta-analysis Tool (2023).

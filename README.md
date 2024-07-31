@@ -15,7 +15,7 @@
    ```bash
    pip install -r requirements.txt
    ```
-4. Proceed with the analysis.
+4. Continue with the analysis.
 ---
 
 If you use this in your work, please cite it like the following:

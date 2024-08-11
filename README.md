@@ -17,5 +17,8 @@
    ```
 4. Continue with the analysis.
 ---
-If you use this software, please cite it as below:
-> Shakiba, M. meta: A Meta-analysis Tool (2023).
+
+## Citation
+```
+Shakiba, M. meta: A Meta-analysis Tool (2023).
+```

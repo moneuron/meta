@@ -22,5 +22,5 @@
 
 ## Citation
 ```
-Shakiba, M. meta: A Meta-analysis Tool (2023).
+Shakiba, M. (2024). meta: A meta-analysis tool (v2.0.0). Zenodo. https://doi.org/10.5281/zenodo.13932966
 ```

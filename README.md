@@ -23,4 +23,3 @@
 ```
 Shakiba, M. (2024). meta: A meta-analysis tool. Zenodo. https://doi.org/10.5281/zenodo.8367839
 ```
-[𝕏 (Twitter)](https://x.com/moneuron) [ResearchGate](https://www.researchgate.net/profile/Mo-Shakiba)
